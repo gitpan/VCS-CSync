@@ -1,0 +1,19 @@
+name: VCS-CSync
+version: 0.01
+abstract: Synchronize and publish code/content from a repository
+author: Adam Kennedy <cpan@ali.as>
+license: perl
+distribution_type: module
+build_requires:
+  Test::More: 0.47
+requires:
+  perl: 5.005
+  Params::Util: 0.05
+  Config::Tiny: 2.01
+  File::Flat: 0.93
+  Getopt::Long: 0
+  File::Spec: 0.82
+no_index:
+  directory:
+    - inc
+generated_by: Module::Install version 0.36
