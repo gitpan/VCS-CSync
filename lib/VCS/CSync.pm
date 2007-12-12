@@ -14,16 +14,17 @@ No specific documentation on module in the C<VCS::CSync> is available.
 
 =cut
 
+use 5.005;
 use strict;
 use Config::Tiny ();
 use Params::Util '_INSTANCE';
 use VCS::CSync::Task ();
-use overload 'bool' => sub () { 1 },
-             '""'   => 'file';
+use overload 'bool' => sub () { 1 };
+use overload '""'   => 'file';
 
 use vars qw{$VERSION $TRACE $VERBOSE};
 BEGIN {
-	$VERSION = '0.01';
+	$VERSION = '0.02';
 
 	# Destination for trace messages
 	$TRACE   = '';
@@ -146,7 +147,7 @@ For other issues, or commercial enhancement or support, contact the author.
 
 =head1 AUTHOR
 
-Adam Kennedy, L<http://ali.as/>, cpan@ali.as
+Adam Kennedy <cpan@ali.as>
 
 =head1 SEE ALSO
 
@@ -154,7 +155,8 @@ L<VCS>, L<VCP>, L<SVK>
 
 =head1 COPYRIGHT
 
-Copyright 2005 Adam Kennedy. All rights reserved.
+Copyright 2005-2007 Adam Kennedy.
+
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.
 
